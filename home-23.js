@@ -2,7 +2,7 @@
 // завдання 1
 
 // class Account  {
-//   constructor(email, login){
+//   constructor({email, login}){
 //     this.email = email;
 //     this.login = login;
 //   }
@@ -16,7 +16,7 @@
 
 
 
-// console.log(Account.prototype.getInfo); // function
+
 // const mango = new Account({
 // login: 'Mangozedog',
 // email: 'mango@dog.woof',
@@ -31,8 +31,10 @@
 
 
 // // завдання 2
+
 // class User {
-//     constructor(name, age, followers){
+
+//     constructor({name, age, followers}){
 // this.name = name;
 // this.age = age;
 // this.followers = followers
@@ -49,18 +51,32 @@
 //     followers: 20,
 //     });
 //     mango.getInfo(); // User Mango is 2 years old and has 20 followers
+//     console.log(mango.getInfo())
+    
+    
 //     const poly = new User({
 //     name: 'Poly',
 //     age: 3,
 //     followers: 17,
 //     });
 //     poly.getInfo(); // User Poly is 3 years old and has 17 followers
+//     console.log(poly.getInfo())
 
+
+//  const exam = function(getMark){
+//     getMark.number
+// return getMark.number += 25
+//    }
+
+//    console.log(exam({
+//     number: 8,
+//    }))
+   
 
 // завдання 3
 // class Storage {
-//     constructor(animal){
-// this.animal = animal
+//     constructor(items){
+// this.items = items;
 //     }
 
 //     getItems(){
@@ -68,7 +84,7 @@
 //     }
 
 //     addItem(item){
-//         this.item.push(item)
+//         this.items.push(item)
 //     }
 
 //     removeItem(item) {
@@ -139,7 +155,7 @@
 class Car {
 
  
-    constructor() {
+    constructor({price, maxSpeed}) {
         this.speed = 0;
         this.price = price;
         this.maxSpeed = maxSpeed;
