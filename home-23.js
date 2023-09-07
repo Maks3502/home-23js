@@ -102,12 +102,99 @@
 
     // завдання 4
 
+//     class StringBuilder {
+//         constructor(string){
+//             this.value = string;
+//         }
+//         get valueP() {
+//             return this.value;
+//           }
+        
+//           append(str) {
+//             this.value += str;
+//           }
+        
+//           prepend(str) {
+//             this.value = str + this.value;
+//           }
+        
+//           pad(str) {
+//             this.value = str + this.value + str;
+//           }
+//     }
 
 
-    const builder = new StringBuilder('.');
-builder.append('^');
-console.log(builder.value); // '.^'
-builder.prepend('^');
-console.log(builder.value); // '^.^'
-builder.pad('=');
-console.log(builder.value); // '=^.^='
+//     const builder = new StringBuilder('.');
+// builder.append('^');
+// console.log(builder.value); // '.^'
+// builder.prepend('^');
+// console.log(builder.value); // '^.^'
+// builder.pad('=');
+// console.log(builder.value); // '=^.^='
+
+
+
+// завдання 5
+
+class Car {
+
+ 
+    constructor() {
+        this.speed = 0;
+        this.price = price;
+        this.maxSpeed = maxSpeed;
+        this.isOn = false;
+        this.distance = 0;
+
+    }
+
+    getprice(Car){
+        return this._price
+    }
+
+    setprice(newPrice) {
+        this._price = newPrice;
+      }
+ 
+    turnOn() {
+        this.isOn = true
+    }
+ 
+    turnOff() {
+        this.isOn = false
+    }
+ 
+    accelerate(value) {
+        if(this.speed + value < this.maxSpeed){
+            this.spred += value
+        }
+    }
+  
+    decelerate(value) {
+        if (this.speed - value >= 0) {
+            this.speed -= value;
+          }
+    }
+ 
+    drive(hours) {
+        if (this.isOn) {
+            this.distance += this.speed * hours;
+          }
+        }
+    }
+    
+    const mustang = new Car({ maxSpeed: 200, price: 2000 });
+    mustang.turnOn();
+    mustang.accelerate(50);
+    mustang.drive(2);
+    Car.getSpecs(mustang);
+    // maxSpeed: 200, speed: 50, isOn: true, distance: 100, price: 2000
+    mustang.decelerate(20);
+    mustang.drive(1);
+    mustang.turnOff();
+    Car.getSpecs(mustang);
+    // maxSpeed: 200, speed: 0, isOn: false, distance: 130, price: 2000
+    console.log(mustang.price); // 2000
+    mustang.price = 4000;
+    console.log(mustang.price); // 4000
+    // Posted Sat 26 Aug 2023 at 11:13 am
